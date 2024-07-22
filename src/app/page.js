@@ -12,7 +12,8 @@ export default function Home() {
   const [roomId, setroomId] = useState("");
 
   var socket;
-  socket = io("http://localhost:3001");
+  const SERVER_URL = process.env.SERVER_URL;
+  socket = io(SERVER_URL);
 
   const handleJoin = () => {
     if (userName !== "" && roomId !== "") {
