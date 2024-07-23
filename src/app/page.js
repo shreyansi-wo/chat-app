@@ -13,7 +13,7 @@ export default function Home() {
 
   var socket;
   const SERVER_URL = process.env.SERVER_URL;
-  socket = io("https://chat-app-backend-2771.onrender.com");
+  socket = io(SERVER_URL);
 
   const handleJoin = () => {
     if (userName !== "" && roomId !== "") {
